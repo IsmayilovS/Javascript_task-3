@@ -1,0 +1,20 @@
+*{
+    text-decoration: none;
+    /* list-style-type: none; */
+}
+#add_btn{
+    border: none;border-top-left-radius:0;border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;border-bottom-right-radius: 6px; color:white;
+    background-color:rgb(3, 123, 255);
+}
+#text{
+    margin-bottom: 20px;
+}
+#add_btn:hover {
+    background-color: rgb(0, 92, 196);
+}
+input{
+    outline-style:none;
+}
+
+
