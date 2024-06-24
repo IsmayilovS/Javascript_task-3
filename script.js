@@ -8,13 +8,13 @@ const arr = []
 addBtn.addEventListener('click',function(){
     let todo = inputTodo.value
     arr.push(todo)
-    console.log(arr)
     inputTodo.value = ''
     addTodoItem(todo,arr.length-1)
 })
 
+
     function addTodoItem(todo,index){
-    console.log(index);
+    // console.log(index);
     const listItems = document.createElement('span')
     const editBtn  = document.createElement('button')
     const todoText  = document.createElement('p')
@@ -65,27 +65,25 @@ addBtn.addEventListener('click',function(){
         editTodoItem(index)
     })
     deletBtn.addEventListener('click',function(){
-        deleteTodoItem(index)
+        deleteTodoItem(listItems)
     })
 }
 function editTodoItem(index){
     const newTodo = prompt('Enter new text for this task')
     arr[index] = newTodo
-    console.log(arr);
     updateTodoList()
 
 }
 function updateTodoList(){
     todoList.innerHTML = ''
     arr.forEach((todo, index) => {
-        console.log(todo);
         addTodoItem(todo,index)
+        
     })
 }
-// function deleteTodoItem(index){
-
-//     arr[index] = listItems.style.display= 'none'
-// }
+function deleteTodoItem(a){
+    a.style.display = 'none'
+}
 
 
 
